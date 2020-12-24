@@ -1,14 +1,49 @@
 #### Kevin Muirhead and Edel Pérez-López, "Plasmodiophora brassicae chitin-binding effectors guard and mask spores during infection" 
 
+
 ### Supplementary Data 
+
+
+## NCBI SRA Run Information File. Contains SRA accession IDs and other metadata for the RNA-Seq experiment.
+
+Pb_eH_SraRunInfo.csv
+
+
 
 ## Scripts
 
 scripts/
 
+fastqc.sh
+trimmomatic.sh
+STAR_build_database.sh
+STAR.sh
+samtools.sh
+cuffdiff.sh
+cummeRbund_heatmap.R
+
+
 ## Conda Environments
 
 envs/
+
+# The NCBI sra-toolkit conda environment.
+sra_toolkit_env.yml
+
+# The fastqc condo environment.
+fastqc_env.yml
+
+# The trimmoamatic condo environment.
+trimmoamatic_env.yml
+
+# The STAR condo environment.
+STAR_env.yml
+
+# The samtools condo environment.
+samtools_env.yml
+
+# The cufflinks condo environment.
+cufflinks_env.yml
 
 
 ## Dropbox Data
@@ -25,6 +60,8 @@ q4, ERR1337808, e3Germ, Gs, Development
 q5, ERR1337809, e3Mature, Ms, Development
 q6, ERR1337810, e3Mix, N/A, N/A
 q7, ERR1337811, e3Plasmodia, Pl, Development
+
+
 
 ## RNA-Seq Data Analysis Workflow (Schwelle 2015)
 
