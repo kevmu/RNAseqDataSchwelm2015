@@ -65,6 +65,18 @@ q7, ERR1337811, e3Plasmodia, Pl, Development
 
 ## RNA-Seq Data Analysis Workflow using the Schwelle 2015 RNA-Seq Dataset
 
+## Download the P. brassicae Pbe3.h15 genome assembly (Schwelm et al. 2015) for mapping RNA-seq reads using STAR (Dobin et al. 2013)
+
+# Link to the Pbe3.h15 genome at the NCBI assembly database.
+https://www.ncbi.nlm.nih.gov/assembly/GCA_001049375.1
+
+# Link to the Genbank GCA assembly on the NCBI FTP site.
+https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/001/049/375/GCA_001049375.1_pbe3.h15/
+
+# Download Genbank GCA assembly on the NCBI FTP site using the wget command.
+wget --recursive --no-host-directories --cut-dirs=6 https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/001/049/375/GCA_001049375.1_pbe3.h15/ -P my_dir/
+
+
 ## If you need to install the conda environments we used in this article use the following conda commands for creating the following environments.
 
 # Create the NCBI sra-toolkit condo environment.
