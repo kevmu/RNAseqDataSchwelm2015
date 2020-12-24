@@ -1,0 +1,8 @@
+name: STAR_env
+channels:
+  - bioconda
+  - defaults
+dependencies:
+  - star=2.7.5c=0
+prefix: /export/home/kmuirhead/anaconda3/envs/STAR_env
+

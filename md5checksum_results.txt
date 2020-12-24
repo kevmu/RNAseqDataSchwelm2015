@@ -1,0 +1,14 @@
+E3BR_l1_1.fq.gz: OK
+E3BR_l1_2.fq.gz: OK
+116_dual75.1.fastq.gz: OK
+116_dual75.2.fastq.gz: OK
+117_dual76.2.fastq.gz: OK
+117_dual76.1.fastq.gz: OK
+105F_index25.2.fastq.gz: OK
+105F_index25.1.fastq.gz: OK
+103F_index22.2.fastq.gz: OK
+103F_index22.1.fastq.gz: OK
+102F_index21.1.fastq.gz: OK
+102F_index21.2.fastq.gz: OK
+P820_101.2.fastq.gz: OK
+P820_101.1.fastq.gz: OK
