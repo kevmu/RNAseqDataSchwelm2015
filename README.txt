@@ -1,4 +1,30 @@
-## Kevin Muirhead and Edel Pérez-López, "Plasmodiophora brassicae chitin-binding effectors guard and mask spores during infection" 
+#### Kevin Muirhead and Edel Pérez-López, "Plasmodiophora brassicae chitin-binding effectors guard and mask spores during infection" 
+
+### Supplementary Data 
+
+## Scripts
+
+scripts/
+
+## Conda Environments
+
+envs/
+
+
+## Dropbox Data
+
+# cuffdiff output directory containing files for generating the cummerRbund heatmap.
+https://www.dropbox.com/sh/mhjim865vfoohu9/AADGqJ7_wluX5eegvJtb6T7ia?dl=0
+
+# cuffdiff Legend
+ID, SRA Accession ID, RNA-Seq Library Name, Heatmap Name, Heatmap Category
+q1, ERR1337805, e3Brapa, Br, Plant Host
+q2, ERR1337806, e3Bnapus, Bn, Plant Host
+q3, ERR1337807, e3Bole, Bo, Plant Host
+q4, ERR1337808, e3Germ, Gs, Development
+q5, ERR1337809, e3Mature, Ms, Development
+q6, ERR1337810, e3Mix, N/A, N/A
+q7, ERR1337811, e3Plasmodia, Pl, Development
 
 ## RNA-Seq Data Analysis Workflow (Schwelle 2015)
 
