@@ -1,4 +1,4 @@
-#### Kevin Muirhead and Edel Pérez-López, "Plasmodiophora brassicae chitin-binding effectors guard and mask spores during infection" 
+Kevin Muirhead and Edel Pérez-López, "Plasmodiophora brassicae chitin-binding effectors guard and mask spores during infection" 
 
 
 ### Supplementary Data 
@@ -77,7 +77,7 @@ https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/001/049/375/GCA_001049375.1_pbe3.h1
 wget --recursive --no-host-directories --cut-dirs=6 https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/001/049/375/GCA_001049375.1_pbe3.h15/ -P my_dir/
 
 
-## If you need to install the conda environments we used in this article use the following conda commands for creating the following environments.
+## If you need to install the conda environments we used in this article. Use the following conda commands for creating the following environments.
 
 # Create the NCBI sra-toolkit condo environment.
 conda create env --file sra_toolkit_env.yml
