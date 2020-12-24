@@ -1,0 +1,10 @@
+name: sra_toolkit_env
+channels:
+  - bioconda
+  - defaults
+dependencies:
+  - _libgcc_mutex=0.1=main
+  - libgcc-ng=9.1.0=hdf63c60_0
+  - libstdcxx-ng=9.1.0=hdf63c60_0
+  - sra-tools=2.9.6=hf484d3e_0
+prefix: /export/home/kmuirhead/anaconda3/envs/sra_toolkit_env
