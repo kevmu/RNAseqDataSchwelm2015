@@ -63,9 +63,9 @@ q7, ERR1337811, e3Plasmodia, Pl, Development
 
 
 
-## RNA-Seq Data Analysis Workflow (Schwelle 2015)
+## RNA-Seq Data Analysis Workflow using the Schwelle 2015 RNA-Seq Dataset
 
-# If you need to install the conda environments we used in this article to follow along with the data analysis use the following conda create environment commands.
+## If you need to install the conda environments we used in this article use the following conda commands for creating the following environments.
 
 # Create the NCBI sra-toolkit condo environment.
 conda create env --file sra_toolkit_env.yml
@@ -84,6 +84,9 @@ conda create env --file samtools_env.yml
 
 # Create the cufflinks condo environment.
 conda create env --file cufflinks_env.yml
+
+
+## Start of RNA-Seq Data Analysis Workflow 
 
 # Create working directory.
 working_dir="$working_dir"
@@ -214,7 +217,7 @@ $working_dir/ERR1337811/STAR_dir/P820_101_Aligned.out.bam \
 -p 56 -o $working_dir/cuffdiff
 
 
-# CummeRbund for generating a heatmap to visualize the differential expression analysis from cuffdiff. This is an Rscript.(scripts/cummeRbund_heatmap.R)
+# CummeRbund for generating a heatmap to visualize the differential expression analysis from cuffdiff. This is an Rscript (scripts/cummeRbund_heatmap.R).
 
 
 #source("https://bioconductor.org/biocLite.R")
