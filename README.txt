@@ -48,10 +48,12 @@ cp E3BR_l1_1.fq.gz E3BR_l1.1.fastq.gz
 cp E3BR_l1_2.fq.gz E3BR_l1.2.fastq.gz
 
 
+### FastQC for quality control assessment and to figure out which sequencing adapters were used.
+
 # Activate the FastQC conda environment.
 conda activate fastqc_env
 
-# Iterate through each RNA-seq Library directory and perform quality control check using the fastqc program.
+# Iterate through each RNA-seq Library directory and perform quality control assessment using the fastqc program.
 for i in $(ls | grep "ERR"); 
 do 
 	echo $i; 
@@ -64,7 +66,7 @@ done
 # Activate the trimmoamatic conda environment.
 conda activate trimmoamatic_env
 
-#
+# Iterate through each RNA-seq Library directory and perform quality-filtering and trimming of adapters using trimmomatic.
 for i in $(ls | grep "ERR"); 
 do 
 	echo $i;
@@ -75,16 +77,16 @@ do
 
 done
 
+### STAR Mapping
 
 # Activate the STAR conda environment.
 conda activate STAR_env
 
-# STAR build genome index file.
+# STAR build genome index file using 28 cpu threads. (scripts/STAR_build_database.sh)
 STAR --runThreadN 28 --genomeSAindexNbases 11 --runMode genomeGenerate --genomeDir $working_dir/STAR_genome_index --genomeFastaFiles $working_dir/STAR_genome_index/GCA_001049375.1_pbe3.h15_genomic.fna 
 
 
-#
-
+# Mapping RNA-seq reads to the P. brassicae Pbe3.h15 genome (Schwelm et al. 2015) using STAR. Using 56 cpu threads. (scripts/STAR.sh)
 for i in $(ls | grep "ERR"); 
 do 
 	echo $i;
@@ -112,11 +114,13 @@ do
 done
 
 
+### Sorting SAM to BAM using samtools.
+
 # Activate the samtools conda environment.
 conda activate samtools_env
 
-#for i in $(ls | grep "ERR");
-for i in $(ls | grep "ERR1337811");  
+# Samtools for sorting SAM format and converting to BAM format using 56 cpu threads (scripts/samtools.sh).
+for i in $(ls | grep "ERR");
 do 
 	echo $i;
 	STAR_dir="$working_dir/$i/STAR_dir"
@@ -127,9 +131,14 @@ do
 done
 
 
-###
 
+### Differential expression analysis using cuffdiff program from cufflinks.
+
+
+# Activate the cufflinks conda environment.
 conda activate cufflinks_env
+
+# Perform differential expression analysis using cuffdiff program from cufflinks (scripts/cufflinks.sh).
 
 cuffdiff $working_dir/STAR_genome_index/GCA_001049375.1_pbe3.h15_genomic.gtf \
 $working_dir/ERR1337805/STAR_dir/E3BR_l1_Aligned.out.bam \
@@ -142,7 +151,7 @@ $working_dir/ERR1337811/STAR_dir/P820_101_Aligned.out.bam \
 -p 56 -o $working_dir/cuffdiff
 
 
-## Rscript
+# CummeRbund for generating a heatmap to visualize the differential expression analysis from cuffdiff. This is an Rscript.(scripts/cummeRbund_heatmap.R)
 
 
 #source("https://bioconductor.org/biocLite.R")
